@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+# user definded
+Web_Scraping_Grading_Rubric.pdf
