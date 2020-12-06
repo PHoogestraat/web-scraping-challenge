@@ -1,0 +1,35 @@
+
+h1 {
+    color: blue;
+}
+
+
+
+
+#featured-image {
+	width: 96%;
+	height: 100%;
+	padding-left: 6px;
+	padding-bottom: 6px;
+	box-sizing: border-box;
+	background-color: rgb(255, 105, 71, 0);
+	background-blend-mode: hue;
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+
+.sty {
+	width: 360px;
+	height: 490px;
+	padding-left: 6px;
+	padding-bottom: 6px;
+	padding: 15px;
+}
+
+.hem-pics {
+	width: 190%;
+	height: 190%;
+	margin-left: 30px;
+	margin-top: 30px;
+	background-blend-mode: hue;
+}

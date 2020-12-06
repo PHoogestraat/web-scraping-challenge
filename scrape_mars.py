@@ -29,9 +29,9 @@ def scrape_info():
 
     url_news = "https://mars.nasa.gov/news/"
     browser.visit(url_news)
-    time.sleep(4)
+    time.sleep(20)
     
-    mars_data_dic = {}
+    #mars_data_dic = {}
 
 
 # HTML Object
@@ -47,7 +47,7 @@ def scrape_info():
 
     mars_data_dic["current_news_title"] = current_news_title
     mars_data_dic["current_news_paragraph"] = current_news_paragraph
-
+    
     
 
 
@@ -61,6 +61,8 @@ def scrape_info():
 ################################################      Wait until page is fully loaded !!!!!!!!!!!!!!!!!!!!
     url_pic = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(url_pic)
+
+    
 
     # HTML Object
     html_pic = browser.html
@@ -97,8 +99,8 @@ def scrape_info():
 ######################################################################
 ############
 ############ Mars Hemisphseres
-    # used to build https path
-    astro = "https://astrogeology.usgs.gov/"
+    
+    
 
     # connecting to USGS Astrogeology site
     hem_url ="https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
@@ -107,9 +109,6 @@ def scrape_info():
     html_hem = browser.html
     hem_soup = bs(html_hem, "html.parser")
 
-    # gets html for pre-site. test target
-    spheresa = hem_soup.find("a", class_="itemLink product-item")["href"]
-    hem_pre_target= astro + spheresa
 
     # stores data form web site to be extracted from in a for loop
     spheres = hem_soup.find_all("div", class_="item")
@@ -145,7 +144,7 @@ def scrape_info():
     return mars_data_dic
 ########################## main code
 # Define dictionary
-#mars_data_dic = {}
+mars_data_dic = {}
 
 # call funtion
 #scrape_info()
