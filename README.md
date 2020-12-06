@@ -6,22 +6,13 @@ In this assignment, you will build a web application that scrapes various websit
 
 ## Step 1 - Scraping
 
-Jupyter Notebook file called `mission_to_mars.ipynb` employed to complete  analysis tasks. 
+* NASA Mars News
 
-### NASA Mars News
+* JPL Mars Space Images - Featured Image
 
-Completed
+* Mars Facts
 
-### JPL Mars Space Images - Featured Image
-
-Completed
-
-### Mars Facts
-Completed
-
-### Mars Hemispheres
-
-Completed
+* Mars Hemispheres
 
 ## Step 2 - MongoDB and Flask Application
 
