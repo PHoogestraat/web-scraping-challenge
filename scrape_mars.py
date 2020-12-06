@@ -30,6 +30,10 @@ def scrape_info():
     url_news = "https://mars.nasa.gov/news/"
     browser.visit(url_news)
     time.sleep(4)
+    
+    mars_data_dic = {}
+
+
 # HTML Object
 # engages parser
     html_news = browser.html
@@ -137,16 +141,16 @@ def scrape_info():
         browser.visit(hem_url)
 
     mars_data_dic["Hemisphere_pic"] = hem_list
-    
+    browser.quit()
     return mars_data_dic
 ########################## main code
 # Define dictionary
-mars_data_dic = {}
+#mars_data_dic = {}
 
 # call funtion
-scrape_info()
+#scrape_info()
 
 # test
-print("##########################")
-print(mars_data_dic)
-print("##########################")
+#print("##########################")
+#print(mars_data_dic)
+#print("##########################")
