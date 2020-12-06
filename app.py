@@ -17,7 +17,8 @@ def index():
     # Find one record of data from the mongo database
     mars_data_dic = mongo.db.collection.find_one()
 
-    # Return template and data
+    # Return template and data 
+    #####################################################################   Test change back to index 
     return render_template("index.html", mars_data_dic=mars_data_dic)
 
 
