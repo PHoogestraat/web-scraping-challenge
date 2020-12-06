@@ -61,13 +61,17 @@ def scrape_info():
 ################################################      Wait until page is fully loaded !!!!!!!!!!!!!!!!!!!!
     url_pic = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(url_pic)
-
+    time.sleep(5)
     
-    time.sleep(10)
+    
     # HTML Object
     html_pic = browser.html
     pic_soup = bs(html_pic, "html.parser")
+
+    
+
     #GET TARGET IMAGE- A bit sloppy, pulls more than it should
+    
     target_image = pic_soup.find("article")["style"]
     # Cleans up text
     target_image = target_image.replace("background-image: url('/", "")
@@ -80,14 +84,15 @@ def scrape_info():
 ######################################################################
 ############
 ############ Mars Facts
-
+    
     # Get data from Mars Facts web page as described in the insturcitons
     url = "https://space-facts.com/mars/"
-
+    
     # get a table
     table = pd.read_html(url)
     # create a dataframe
     mars_df = table[0]
+    mars_df = mars_df.rename(columns={0:"Observation", 1: "Data"})
 
     # convert to ta HTML
     mars_table = mars_df.to_html()
