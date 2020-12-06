@@ -63,7 +63,7 @@ def scrape_info():
     browser.visit(url_pic)
 
     
-
+    time.sleep(10)
     # HTML Object
     html_pic = browser.html
     pic_soup = bs(html_pic, "html.parser")
