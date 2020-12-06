@@ -29,7 +29,7 @@ def scrape_info():
 
     url_news = "https://mars.nasa.gov/news/"
     browser.visit(url_news)
-    time.sleep(20)
+    time.sleep(5)
     
     #mars_data_dic = {}
 
