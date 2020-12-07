@@ -2,12 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mission to Mars</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="UTF-8">   
+    <title>Mission to Mars</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bring in our bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
+
 </head>
 
 <body>
@@ -34,13 +38,14 @@
                 <div class="box bg-style2">
                     <h3><b>Featured Mars Image</b></h3>
                     
-                    <img src="{{mars_data_dic.featured_image_url}}"  width="500"/>
+                    <img src="{{mars_data_dic.featured_image_url}}"  width="550"/>
+                    <img src="/web-scraping-challenge/Images/test.png"width="550"/>
                 </div>
             </div>
             <br>
             
-            <div class="col-md-5" id="weather-box">
-                <div class="text-white bg-style sty">
+            <div class="col-md-4" id="weather-box">
+                <div class="box bg-style2">
                     <h3><b>Mars Facts</b></h3>
                 
                     {{mars_data_dic.mars_facts|safe}}
@@ -54,7 +59,7 @@
 
     <!--Container-3 Mars Hemispheres -->
 	<br>
-	<div class="container" id="cont-1">
+	<div class="container center" class= "text-center" id="cont-1">
 		<div class="row">
 			<div class="col-sm-12">
 				<h2><b>Mars Hemispheres</b></h2>
@@ -65,7 +70,7 @@
 				<div class="col-md-6">
 					<div class="box bg-style2">
 						<div class="col-md-6">
-							<img class="card-img-top hem-pics" src="{{ item.img_url }}" width="500"/>
+							<img class="card-img-top hem-pics" src="{{ item.img_url }}" width="550"/>
 							<div class="card-body">
 								<p class="card-text">{{item.title}}</p>
 							</div>
@@ -87,7 +92,7 @@
 
   
 </section>  
-
+<div class="spacerbig"></div>
 
 
 </body>

@@ -1,18 +1,13 @@
 
 h1 {
-    color: blue;
-}
+    }
 
 
-h2 {
-  color: #f71911;
+h2 { 
   margin-left: 100px;
-
 }
 
-h3 {
-  color: rgb(51, 8, 245);
-}
+
 
 body {
     padding: 10;
@@ -26,18 +21,11 @@ body {
     background: #f1e68e;
   }
 
-h1 {margin-left: 50px;
-}
 
-h2 {
   
-  margin-left: 100px;
 
-}
 
-h3 {
 
-}
 
 body {
     padding: 10;
