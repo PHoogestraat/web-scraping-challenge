@@ -61,14 +61,14 @@ def scrape_info():
 ################################################      Wait until page is fully loaded !!!!!!!!!!!!!!!!!!!!
     url_pic = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(url_pic)
-    time.sleep(5)
+
+
     
     
     # HTML Object
     html_pic = browser.html
     pic_soup = bs(html_pic, "html.parser")
 
-    
 
     #GET TARGET IMAGE- A bit sloppy, pulls more than it should
     
@@ -157,4 +157,5 @@ mars_data_dic = {}
 # test
 #print("##########################")
 #print(mars_data_dic)
+#print(target_image)
 #print("##########################")
