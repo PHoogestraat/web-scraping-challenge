@@ -34,3 +34,4 @@ In this assignment, you will build a web application that scrapes various websit
 
 ## Hints
 
+Start early
