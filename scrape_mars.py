@@ -61,19 +61,20 @@ def scrape_info():
 ################################################      Wait until page is fully loaded !!!!!!!!!!!!!!!!!!!!
     url_pic = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(url_pic)
-
-
+    
+    time.sleep(15)
     
     
     # HTML Object
     html_pic = browser.html
     pic_soup = bs(html_pic, "html.parser")
-
-
+    time.sleep(15)
+    
     #GET TARGET IMAGE- A bit sloppy, pulls more than it should
     
     target_image = pic_soup.find("article")["style"]
     # Cleans up text
+    time.sleep(15)
     target_image = target_image.replace("background-image: url('/", "")
     target_image = target_image.replace("');", "")
 
@@ -102,6 +103,8 @@ def scrape_info():
 
     mars_data_dic["mars_facts"] = mars_table
 ######################################################################
+
+
 ############
 ############ Mars Hemisphseres
     
@@ -146,7 +149,12 @@ def scrape_info():
 
     mars_data_dic["Hemisphere_pic"] = hem_list
     browser.quit()
+    
     return mars_data_dic
+
+
+
+
 ########################## main code
 # Define dictionary
 mars_data_dic = {}

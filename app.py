@@ -4,7 +4,7 @@ import scrape_mars
 from splinter import Browser
 
 # Create an instance of Flask
-app = Flask(__name__)
+app = Flask(__name__,static_folder="static")
 
 # Use PyMongo to establish Mongo connection
 mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
@@ -37,4 +37,4 @@ def scrape_info():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug= False)
